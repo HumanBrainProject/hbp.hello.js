@@ -1,0 +1,23 @@
+{
+  "name": "hbp.hello.js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "hbp.hello.js",
+  "directories": {
+    "example": "example"
+  },
+  "dependencies": {
+    "gulp-jasmine": "^2.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.3.1",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1",
+    "gulp-serve": "^1.4.0",
+    "gulp-watch": "^4.3.9",
+  },
+  "scripts": {
+    "test": "gulp"
+  },
+  "private": true
+}

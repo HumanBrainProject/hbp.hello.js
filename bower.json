@@ -1,0 +1,25 @@
+{
+  "name": "hbp.hello.js",
+  "authors": [
+    "Olivier Amblet <olivier.amblet@epfl.ch>"
+  ],
+  "description": "Hello.js module that provide OAuth2 authentication to the Human Brain Project",
+  "main": "hbp.hello.js",
+  "keywords": [
+    "hbp",
+    "hello",
+    "javascript",
+    "oauth2"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "**/*.spec.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "hello": "^1.13.4"
+  }
+}

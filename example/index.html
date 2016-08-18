@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HBP Oauth2 with hbp.hello.js</title>
+  </head>
+  <body>
+
+    <h1>Login to the Human Brain Project with hello.js and hbp.hello.js</h1>
+
+    <nav>
+      <button onclick="hello.login('hbp')" type="button" name="login">Login</button>
+      <button onclick="hello.logout('hbp')" type="button" name="logout">Logout</button>
+      <button onclick="hello.login('hbp', {force: true})" type="button" name="force-login">Force Login</button>
+      <button onclick="hello.logout('hbp', {force: true})" type="button" name="force-logout">Force Logout</button>
+      <button onclick="hello.login('hbp', {display: 'page'})" type="button" name="login">Login Using Page Redirection</button>
+    </nav>
+
+    <h3>Authentication Status</h3>
+    <p id="status">No event triggered</p>
+    <h3>Auth Response</h3>
+    <pre id="auth-response"></pre>
+
+    <script src="./bower_components/hello/dist/hello.js" charset="utf-8"></script>
+    <script src="./hbp.hello.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      // This is the code you need to make the application work.
+      hello.init({
+        hbp: '2bc1364d-1039-495b-b51e-608108cbefce' // Replace with your app id
+      });
+      hello.on('auth.login', displayAuthStatus);
+      hello.on('auth.logout', displayAuthStatus);
+
+      function displayAuthStatus(event) {
+        console.log(event);
+        if (event.authResponse) {
+          document.getElementById('status').innerHTML = 'Logged In'
+        } else {
+          document.getElementById('status').innerHTML = 'Not Logged In'
+        }
+        document.getElementById('auth-response').innerHTML =
+          JSON.stringify(event.authResponse, null, 2);
+      }
+    </script>
+  </body>
+</html>
