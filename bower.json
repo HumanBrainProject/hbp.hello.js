@@ -1,5 +1,6 @@
 {
   "name": "hbp.hello.js",
+  "version": "0.0.1",
   "authors": [
     "Olivier Amblet <olivier.amblet@epfl.ch>"
   ],
