@@ -14,7 +14,7 @@
     "gulp": "^3.9.1",
     "gulp-eslint": "^3.0.1",
     "gulp-serve": "^1.4.0",
-    "gulp-watch": "^4.3.9",
+    "gulp-watch": "^4.3.9"
   },
   "scripts": {
     "test": "gulp"
